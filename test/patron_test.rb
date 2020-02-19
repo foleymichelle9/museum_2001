@@ -5,8 +5,12 @@ require './lib/patron'
 
 
 class PatronTest < Minitest::Test
+  def test_it_exists
+  #pry => NameError: undefined local variable or method
+  #`patron' for PatronTest:Class when I call patron.class?!? :()
   patron_1 = Patron.new("Bob", 20)
-  assert_instance_of Patron, patron 
+  assert_instance_of Patron, patron
+  end
 end
 
 
