@@ -1,3 +1,13 @@
+require "minitest/autorun"
+require "minitest/pride"
+require './lib/exhibit'
+require './lib/patron'
+
+
+class PatronTest < Minitest::Test
+  patron_1 = Patron.new("Bob", 20)
+  assert_instance_of Patron, patron 
+end
 
 
 
@@ -20,14 +30,6 @@
 
 
 
-#pry(main)> exhibit = Exhibit.new({name: "Gems and Minerals", cost: 0})
-# => #<Exhibit:0x00007fcb13bd22d0...>
-
-#pry(main)> exhibit.name
-# => "Gems and Minerals"
-
-#pry(main)> exhibit.cost
-# => 0
 
 #pry(main)> patron_1 = Patron.new("Bob", 20)
 # => #<Patron:0x00007fcb13b5c7d8...>
