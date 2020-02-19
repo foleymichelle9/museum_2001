@@ -15,6 +15,7 @@ class PatronTest < Minitest::Test
     patron_1 = Patron.new("Bob", 20)
     assert_equal "Bob", patron_1.name
     assert_equal 20, patron_1.spending_money
+    assert_equal [], patron_1.interests
   end
 end
 
@@ -40,14 +41,7 @@ end
 
 
 
-#pry(main)> patron_1 = Patron.new("Bob", 20)
-# => #<Patron:0x00007fcb13b5c7d8...>
 
-#pry(main)> patron_1.name
-# => "Bob"
-
-#pry(main)> patron_1.spending_money
-# => 20
 
 #pry(main)> patron_1.interests
 # => []
